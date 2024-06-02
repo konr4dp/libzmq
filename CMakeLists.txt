@@ -1816,3 +1816,7 @@ if(MSVC
    AND BUILD_STATIC)
   add_dependencies(libzmq-static libzmq)
 endif()
+
+
+# Libzmq redefine so it could be installed to required location
+install(TARGETS libzmq DESTINATION libZMQ COMPONENT libZMQ)
