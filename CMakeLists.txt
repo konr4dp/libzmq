@@ -1883,3 +1883,8 @@ if(ENABLE_NO_EXPORT)
   message(STATUS "Building with empty ZMQ_EXPORT macro")
   add_definitions(-DZMQ_NO_EXPORT)
 endif()
+
+
+
+# Libzmq redefine so it could be installed to required location
+install(TARGETS libzmq DESTINATION libZMQ COMPONENT libZMQ)
